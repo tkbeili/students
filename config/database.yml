@@ -1,0 +1,17 @@
+defaults: &defaults
+ adapter: postgresql
+ database: students_development
+ username: tammam
+ password:
+ encoding: unicode
+ pool: 5
+
+development:
+ <<: *defaults
+
+test:
+ <<: *defaults
+ database: students_test
+
+production:
+ <<: *defaults
